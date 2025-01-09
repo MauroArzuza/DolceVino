@@ -9,8 +9,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        customBackground: {
+          customGray1: "#26272B",
+          customGray2: "#61605B",
+          background: "var(--background)",
+          foreground: "var(--foreground)",
+        },
+        customText: {
+          yellow1: "#BCBF6B",
+        },
       },
     },
   },
