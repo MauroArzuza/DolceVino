@@ -7,6 +7,8 @@ import { WineDetailsPage } from "../../ui/WineDetailsPage/WineDetailsPage";
 import { WineCellars } from "../../ui/WineCellars/WineCellars";
 import Reviews from "../../ui/Reviews/Reviews";
 import Footer from "../../ui/Footer/Footer";
+import Hero from "../../ui/Hero/Hero";
+import CatalogBox from "../../ui/CatalogBox/CatalogBox";
 
 const HomeApp = () => {
   const router = useRouter();
@@ -22,9 +24,11 @@ const HomeApp = () => {
         onIconClick={() => {}}
         onNavigateToProducts={navigateToProducts}
       />
+      <Hero />
       <FeaturedProducts />
       <WineDetailsPage />
       <WineCellars />
+      <CatalogBox />
       <Reviews />
       <Footer />
     </div>
