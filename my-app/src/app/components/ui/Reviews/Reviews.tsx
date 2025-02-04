@@ -27,7 +27,7 @@ const Reviews = () => {
   }, []);
   return (
     <div>
-      <h4 className="text-center mt-2 text-lg font-bold">Nuestras reseñas</h4>
+      <h4 className="text-center mt-4 text-lg font-bold">Nuestras reseñas</h4>
       <Swiper
         modules={[Navigation]}
         slidesPerView={1}
@@ -71,7 +71,7 @@ const Reviews = () => {
           return (
             <SwiperSlide
               key={review.id}
-              className="flex justify-center items-center w-full my-4"
+              className="flex justify-center items-center w-full my-2"
             >
               <div className="shadow-md p-4 max-w-[300px] w-full  flex flex-col justify-between mx-auto">
                 <div className="flex mb-4 items-center">

@@ -33,7 +33,7 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <div>
+    <div className="my-4">
       <h4 className="text-center font-bold text-lg">Productos destacados</h4>
       <Swiper
         modules={[Navigation]}
@@ -52,13 +52,13 @@ const FeaturedProducts = () => {
         {featuredProducts.map((product) => (
           <SwiperSlide key={product.id} className="max-w-[250]">
             <Image
-              className="shadow rounded mx-auto"
+              className="shadow-lg rounded mx-auto"
               src={product.imagen}
               height={200}
-              width={200}
+              width={150}
               alt={`Imagen de ${product.nombre}`}
             />
-            <p className="text-center max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
+            <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
               {product.nombre}
             </p>
           </SwiperSlide>
@@ -80,13 +80,13 @@ const FeaturedProducts = () => {
         {featuredProducts.map((product) => (
           <SwiperSlide key={product.id} className="max-w-[250]">
             <Image
-              className="shadow rounded mx-auto"
+              className="shadow-lg rounded mx-auto"
               src={product.imagen}
               height={200}
-              width={200}
+              width={150}
               alt={`Imagen de ${product.nombre}`}
             />
-            <p className="text-center max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
+            <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
               {product.nombre}
             </p>
           </SwiperSlide>

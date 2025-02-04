@@ -15,6 +15,7 @@ export default {
           background: "var(--background)",
           foreground: "var(--foreground)",
         },
+        footer: "#39342E",
         customText: {
           yellow1: "#BCBF6B",
         },

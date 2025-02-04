@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Header } from "../../Header/Header";
+import { Header } from "../../ui/Header/Header";
 import Image from "next/image";
 
 export const DetailProduct = () => {
