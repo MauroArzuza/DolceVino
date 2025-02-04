@@ -1,13 +1,12 @@
-"use client";
-
-import HomeApp from "./components/screens/HomeApp/HomeApp";
-import ProductByCategory from "./components/screens/ProductByCategory/ProductByCategory";
+import Image from "next/image";
+import Hero from "./components/Hero/Hero";
+import CatalogBox from "./components/CatalogBox";
 
 export default function Home() {
   return (
     <div>
-      {/* <HomeApp /> */}
-      <ProductByCategory />
+      <Hero />
+      <CatalogBox />
     </div>
   );
 }
