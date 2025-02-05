@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 interface IReviews {
   id: number;
