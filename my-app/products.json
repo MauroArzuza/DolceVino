@@ -1,0 +1,30 @@
+[{
+  "id": 1,
+  "nombre": "Bianchi malbec",
+  "precio": 12000,
+  "imagen": "/Bianchi.webp",
+  "destacado": true
+},
+{
+  "id": 2,
+  "nombre": "Cordero con piel de lobo",
+  "precio": 8000,
+  "imagen": "/corderoConPielDeLobo.webp",
+  "destacado": true
+},
+{
+  "id": 3,
+  "nombre": "Trivento reserve rosé",
+  "precio": 15000,
+  "imagen": "/triventoReserveRose.webp",
+  "destacado": true
+},
+{
+  "id": 4,
+  "nombre": "Doña Paula",
+  "precio": 16000,
+  "imagen": "/doñaPaula.webp",
+  "destacado": true
+}
+
+]
