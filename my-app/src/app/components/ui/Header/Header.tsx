@@ -7,14 +7,15 @@ import React, { useState } from "react";
 interface HeaderProps {
   showLogo: boolean;
   icon: "menu" | "home";
-  onIconClick: () => void;
-  onNavigateToProducts: () => void;
+  onIconClick?: () => void;
+  onNavigateToProducts?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   showLogo,
   icon,
   onIconClick,
+  onNavigateToProducts,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

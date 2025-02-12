@@ -3,15 +3,25 @@ import React from "react";
 
 const ProductSearch = () => {
   return (
-    <div className="bg-footer w-[200] h-[50] flex justify-center items-center gap-2 rounded mx-auto mt-2">
+    <div className="sm:relative bg-footer sm:w-[800]  w-[200] h-[50] flex justify-center items-center gap-2 rounded mx-auto mt-4">
       <button>
-        <Image width={25} height={25} alt="Search" src="/Search.svg" />
+        <Image
+          className="sm:left-2 sm:top-3 sm:absolute"
+          width={25}
+          height={25}
+          alt="Search"
+          src="/Search.svg"
+        />
       </button>
       <input
-        className="w-[150] h-[25] placeholder-customText-yellow1 bg-footer text-white"
+        className="sm:hidden w-[150] h-[25] placeholder-customText-yellow1 bg-footer text-white"
         type="text"
         placeholder="Buscar"
         id="buscador"
+      />
+      <input
+        className="hidden sm:block w-[600] placeholder-white text-center bg-footer text-white"
+        placeholder="¿Que estas buscando?"
       />
     </div>
   );
