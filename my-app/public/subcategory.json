@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "name": "Malbec",
+    "idCategoriaPadre": "1"
+  },
+  {
+    "id": "2",
+    "name": "Cabernet",
+    "idCategoriaPadre": "1"
+  },
+  {
+    "id": "3",
+    "name": "Chardonnay",
+    "idCategoriaPadre": "2"
+  },
+  {
+    "id": "4",
+    "name": "Red Label",
+    "idCategoriaPadre": "4"
+  },
+  {
+    "id": "5",
+    "name": "Coca-Cola",
+    "idCategoriaPadre": "3"
+  }
+]

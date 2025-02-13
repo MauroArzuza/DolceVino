@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "nombre": "Jorge Curotto",
-    "fecha": "2021-01-09T00:00:00Z",
-    "imagen": "/user.png",
-    "calificacion": 5,
-    "descripcion": "Buen surtido de vinos, espumantes, bebidas blancas y cerveza. Excelente atención con buen asesoramiento. Precios razonables."
+    "name": "Jorge Curotto",
+    "date": "2021-01-09T00:00:00Z",
+    "image": "/user.png",
+    "score": 5,
+    "description": "Buen surtido de vinos, espumantes, bebidas blancas y cerveza. Excelente atención con buen asesoramiento. Precios razonables."
   },
   {
     "id": 2,
-    "nombre": "Ariel Roberto Quiroga",
-    "fecha": "2024-02-09T00:00:00Z",
-    "imagen": "/user.png",
-    "calificacion": 5,
-    "descripcion": "Muy buena experiencia, riquísimos vinos compré, Servicio: 5, Ambiente: 5"
+    "name": "Ariel Roberto Quiroga",
+    "date": "2024-02-09T00:00:00Z",
+    "image": "/user.png",
+    "score": 5,
+    "description": "Muy buena experiencia, riquísimos vinos compré, Servicio: 5, Ambiente: 5"
   },
   {
     "id": 3,
-    "nombre": "Patricia Pacheco",
-    "fecha": "2023-01-09T00:00:00Z",
-    "imagen": "/user.png",
-    "calificacion": 5,
-    "descripcion": "Excelente atención.... siempre dispuestos a ofrecer lo mejor. Gran surtido de vinos y espumantes"
+    "name": "Patricia Pacheco",
+    "date": "2023-01-09T00:00:00Z",
+    "image": "/user.png",
+    "score": 5,
+    "description": "Excelente atención.... siempre dispuestos a ofrecer lo mejor. Gran surtido de vinos y espumantes"
   }
 ]
