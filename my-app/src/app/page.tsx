@@ -2,8 +2,8 @@
 
 import "./globals.css";
 import { Header } from "./components/Header/Header";
-// import { WineCellars } from "./components/WineCellars/WineCellars";
-// import { WineDetailsPage } from "./components/WineDetailsPage/WineDetailsPage";
+import { WineCellars } from "./components/WineCellars/WineCellars";
+import { WineDetailsPage } from "./components/WineDetailsPage/WineDetailsPage";
 import { useRouter } from "next/navigation";
 // import Products from "./components/screens/Products/Products";
 import { DetailProduct } from "./components/screens/DetailProduct/DetailProduct";
@@ -24,8 +24,8 @@ export default function Home() {
       />
       {/* <Products /> */}
       <DetailProduct />
-      {/* <WineDetailsPage />
-      <WineCellars /> */}
+      <WineDetailsPage />
+      <WineCellars />
     </div>
   );
 }
