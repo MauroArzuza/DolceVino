@@ -1,13 +1,10 @@
 import Login from "./components/Login/Login";
-import Hero from "./components/Hero/Hero";
-import CatalogBox from "./components/CatalogBox/CatalogBox";
+import HomeApp from "./components/screens/HomeApp/HomeApp";
 
 export default function Home() {
   return (
     <div>
       <Login />
-      <Hero />
-      <CatalogBox />
     </div>
   );
 }
