@@ -1,4 +1,4 @@
-import HomeApp from "../src/components/screens/HomeApp/HomeApp";
+import HomeApp from "./components/screens/HomeApp/HomeApp";
 
 export default function Home() {
   return (
