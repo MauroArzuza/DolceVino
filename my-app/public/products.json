@@ -1,30 +1,46 @@
-[{
-  "id": 1,
-  "nombre": "Bianchi malbec",
-  "precio": 12000,
-  "imagen": "/Bianchi.webp",
-  "destacado": true
-},
-{
-  "id": 2,
-  "nombre": "Cordero con piel de lobo",
-  "precio": 8000,
-  "imagen": "/corderoConPielDeLobo.webp",
-  "destacado": true
-},
-{
-  "id": 3,
-  "nombre": "Trivento reserve rosé",
-  "precio": 15000,
-  "imagen": "/triventoReserveRose.webp",
-  "destacado": true
-},
-{
-  "id": 4,
-  "nombre": "Doña Paula",
-  "precio": 16000,
-  "imagen": "/doñaPaula.webp",
-  "destacado": true
-}
-
+[
+  {
+    "id": 1,
+    "name": "Bianchi malbec",
+    "idCategory": "1",
+    "idSubcategory": "1",
+    "price": 12000,
+    "image": "/Bianchi.webp",
+    "description": "Vino Tinto de Malbec de Argentina",
+    "idBrand": "1",
+    "prominent": true
+  },
+  {
+    "id": 2,
+    "name": "Cordero con piel de lobo",
+    "idCategory": "1",
+    "idSubcategory": "1",
+    "price": 8000,
+    "image": "/corderoConPielDeLobo.webp",
+    "description": "Vino Tinto de Malbec de Argentina",
+    "idBrand": "2",
+    "prominent": true
+  },
+  {
+    "id": 3,
+    "name": "Trivento reserve rosé",
+    "idCategory": "1",
+    "idSubcategory": "1",
+    "price": 15000,
+    "image": "/triventoReserveRose.webp",
+    "description": "Vino Blanco de Rosé de Argentina",
+    "idBrand": "3",
+    "prominent": true
+  },
+  {
+    "id": 4,
+    "name": "Doña Paula",
+    "idCategory": "1",
+    "idSubcategory": "1",
+    "price": 16000,
+    "image": "/doñaPaula.webp",
+    "description": "Vino Blanco Doña Paula de Argentina",
+    "idBrand": "3",
+    "prominent": true
+  }
 ]
