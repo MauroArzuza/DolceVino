@@ -112,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({
                   <ul className="divide-y divide-customText-yellow1">
                     <li>
                       <Link
-                        href="../../screens/Products/Products.tsx"
+                        href={`./screens/Products.tsx`}
                         className="block px-4 py-2 mb-6 text-white hover:bg-customBackground-customGray2 text-2xl pt-4 pb-0"
                       >
                         Nuestros productos
