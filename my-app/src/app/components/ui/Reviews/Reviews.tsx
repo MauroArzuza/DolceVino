@@ -9,11 +9,11 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 interface IReviews {
   id: number;
-  nombre: string;
-  fecha: string;
-  imagen: string;
-  calificacion: number;
-  descripcion: string;
+  name: string;
+  date: string;
+  image: string;
+  score: number;
+  description: string;
 }
 
 const Reviews = () => {
@@ -44,7 +44,7 @@ const Reviews = () => {
       >
         {reviews.map((review: IReviews) => {
           const fechaActual = new Date();
-          const fechaReview = new Date(review.fecha);
+          const fechaReview = new Date(review.date);
 
           const diferenciaAnios =
             fechaActual.getFullYear() - fechaReview.getFullYear();
@@ -77,15 +77,15 @@ const Reviews = () => {
                 <div className="flex mb-4 items-center">
                   <Image
                     alt="Foto-perfil"
-                    src={review.imagen}
+                    src={review.image}
                     width={30}
                     height={30}
                     className="mr-2"
                   />
-                  <p>{review.nombre}</p>
+                  <p>{review.name}</p>
                 </div>
                 <div className="flex">
-                  {Array.from({ length: review.calificacion }, (_, index) => (
+                  {Array.from({ length: review.score }, (_, index) => (
                     <Image
                       key={index}
                       src={"/star.png"}
@@ -97,7 +97,7 @@ const Reviews = () => {
                   ))}
                   <p className="ml-2">hace {tiempoTranscurrido}</p>
                 </div>
-                <p className="mt-2">{review.descripcion}</p>
+                <p className="mt-2">{review.description}</p>
               </div>
             </SwiperSlide>
           );

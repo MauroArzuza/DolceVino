@@ -9,10 +9,14 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 interface Product {
   id: number;
-  nombre: string;
-  precio: number;
-  imagen: string;
-  destacado: boolean;
+  name: string;
+  idCategory: string;
+  idSubcategory: string;
+  price: 12000;
+  image: string;
+  description: string;
+  idBrand: string;
+  prominent: boolean;
 }
 
 const FeaturedProducts = () => {
@@ -23,7 +27,7 @@ const FeaturedProducts = () => {
       .then((response) => response.json())
       .then((data) => {
         const featured = data.filter(
-          (product: Product) => product.destacado === true
+          (product: Product) => product.prominent === true
         );
         setFeaturedProducts(featured);
       })
@@ -53,13 +57,13 @@ const FeaturedProducts = () => {
           <SwiperSlide key={product.id} className="max-w-[250]">
             <Image
               className="shadow-lg rounded mx-auto"
-              src={product.imagen}
+              src={product.image}
               height={200}
               width={150}
-              alt={`Imagen de ${product.nombre}`}
+              alt={`Imagen de ${product.name}`}
             />
             <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
-              {product.nombre}
+              {product.name}
             </p>
           </SwiperSlide>
         ))}
@@ -78,16 +82,16 @@ const FeaturedProducts = () => {
         className="w-full max-w-[1100] mt-4"
       >
         {featuredProducts.map((product) => (
-          <SwiperSlide key={product.id} className="max-w-[250]">
+          <SwiperSlide key={product.id} className="max-w-[250px]">
             <Image
               className="shadow-lg rounded mx-auto"
-              src={product.imagen}
+              src={product.image}
               height={200}
               width={150}
-              alt={`Imagen de ${product.nombre}`}
+              alt={`Imagen de ${product.name}`}
             />
             <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
-              {product.nombre}
+              {product.name}
             </p>
           </SwiperSlide>
         ))}

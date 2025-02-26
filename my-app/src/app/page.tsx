@@ -4,7 +4,7 @@ import ProductByCategory from "./components/screens/ProductByCategory/ProductByC
 export default function Home() {
   return (
     <div>
-      <ProductByCategory />
+      <HomeApp />
     </div>
   );
 }
