@@ -36,12 +36,8 @@ const Hero = () => {
           />
         </SwiperSlide>
       </Swiper>
-      {/* Footer */}
       <div className="absolute bottom-0 left-0 w-full bg-[#BBC620] text-center py-1 flex items-center justify-center space-x-12 group">
-        {/* Texto "¡PRECIO DE LISTA!" */}
         <p className="text-white font-bold text-sm ml-4">¡PRECIO DE LISTA!</p>
-
-        {/* Botón "Servicio Personalizado" */}
         <button
           className="flex items-center justify-center space-x-2 bg-[#BBC620] font-bold text-sm px-4 py-2 rounded group-hover:bg-[#8D960B]"
           onClick={() => alert("Servicio personalizado")}
