@@ -2,12 +2,72 @@
 import Image from "next/image";
 import { Header } from "../../ui/Header/Header";
 import ProductSearch from "../../ui/ProductSearch/ProductSearch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+interface categoria {
+  id: number;
+  name: string;
+}
+
+interface subcategoria {
+  id: number;
+  name: string;
+  idCategoriaPadre: number;
+}
+
+interface marca {
+  id: number;
+  name: string;
+}
+
+interface product {
+  id: number;
+  name: string;
+  idCategory: string;
+  idSubcategory: number;
+  price: number;
+  image: string;
+  description: string;
+  idBrand: number;
+  prominent: boolean;
+}
 
 const ProductByCategory = () => {
-  const [categoria, setCategoria] = useState("");
-  const [subcategoria, setSubcategoria] = useState("");
-  const [marca, setMarca] = useState("");
+  const [selectCategoria, setSelectCategoria] = useState<number>();
+  const [categoria, setCategoria] = useState<categoria[]>([]);
+  const [selectSubcategoria, setSelectSubcategoria] = useState<number>();
+  const [subcategoria, setSubcategoria] = useState<subcategoria[]>([]);
+  const [selectMarca, setSelectMarca] = useState<number>();
+  const [marca, setMarca] = useState<marca[]>();
+  const [products, setProducts] = useState<product[]>();
+
+  useEffect(() => {
+    fetch("/category.json")
+      .then((res) => res.json())
+      .then((data) => setCategoria(data))
+      .catch((err) => console.error("Error al cargar categorias: " + err));
+  }, []);
+
+  useEffect(() => {
+    fetch("/subcategory.json")
+      .then((res) => res.json())
+      .then((data) => setSubcategoria(data))
+      .catch((err) => console.error("Error al cargar subcategorias: " + err));
+  }, []);
+
+  useEffect(() => {
+    fetch("/brand.json")
+      .then((res) => res.json())
+      .then((data) => setMarca(data))
+      .catch((err) => console.error("Error al cargar marcas: " + err));
+  }, []);
+
+  useEffect(() => {
+    fetch("/products.json")
+      .then((res) => res.json())
+      .then((data) => setProducts(data))
+      .catch((err) => console.error("Error al cargar productos: " + err));
+  });
 
   return (
     <div>
@@ -16,63 +76,65 @@ const ProductByCategory = () => {
 
       <div className="flex flex-col mt-4 gap-3 items-center">
         <select
-          value={categoria}
-          onChange={(e) => setCategoria(e.target.value)}
+          value={selectCategoria}
+          onChange={(e) => setSelectCategoria(Number(e.target.value))}
           className="border rounded border-customText-yellow1 p-2 text-customText-yellow1 w-[250px] text-center"
         >
-          <option value="" disabled>
-            Categoria
-          </option>
-          <option value="1">Categoria 1</option>
-          <option value="2">Categoria 2</option>
-          <option value="3">Categoria 3</option>
+          <option value="">Categoria</option>
+          {categoria.map((c) => (
+            <option value={c.id}>{c.name}</option>
+          ))}
         </select>
 
         <select
-          value={subcategoria}
-          onChange={(e) => setSubcategoria(e.target.value)}
+          value={selectSubcategoria}
+          onChange={(e) => setSelectSubcategoria(Number(e.target.value))}
           name="Subcategorias"
           className="border rounded border-customText-yellow1 p-2 text-customText-yellow1 w-[250px] text-center"
         >
-          <option value="" disabled>
-            Subcategoria
-          </option>
-          <option value="1">Subcategoria 1</option>
-          <option value="2">Subcategoria 2</option>
-          <option value="3">Subcategoria 3</option>
+          <option value="">Subcategoria</option>
+          {subcategoria.map((sc) => (
+            <option value={sc.id}>{sc.name}</option>
+          ))}
         </select>
 
         <select
-          value={marca}
-          onChange={(e) => setMarca(e.target.value)}
+          value={selectMarca}
+          onChange={(e) => setSelectMarca(Number(e.target.value))}
           name="marca"
           className="border rounded border-customText-yellow1 p-2 text-customText-yellow1 w-[250px] text-center"
         >
-          <option value="" disabled>
-            Marca
-          </option>
-          <option value="1">Marca 1</option>
-          <option value="2">Marca 2</option>
-          <option value="3">Marca 3</option>
+          <option value="">Marca</option>
+          {marca?.map((m) => (
+            <option value={m.id}>{m.name}</option>
+          ))}
         </select>
       </div>
-      <div className="flex relative flex-col mx-auto mt-4 items-center border rounded shadow-xl w-[200]">
-        <Image
-          alt="Imagen vino"
-          src={"/Bianchi.webp"}
-          width={200}
-          height={200}
-        />
-        <p className="text-center">$54000</p>
-        <a>
-          <Image
-            alt="Whatsapp icon"
-            src="/Whatsapp-Logo.svg"
-            width={30}
-            height={30}
-            className="absolute right-1 bottom-1"
-          />
-        </a>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-[1200px] mx-auto mt-4">
+        {products?.map((p, index) => (
+          <div
+            key={index}
+            className="flex relative flex-col mx-auto mt-4 items-center border rounded shadow-xl w-[200px]"
+          >
+            <Image
+              alt={`Imagen ${p.name}`}
+              src={`${p.image}`}
+              width={200}
+              height={200}
+            />
+            <p className="text-center">{p.price}</p>
+            <a href="https://wa.me/xxxxxxxxxx">
+              <Image
+                alt="Whatsapp icon"
+                src="/Whatsapp-Logo.svg"
+                width={30}
+                height={30}
+                className="absolute right-1 bottom-1"
+              />
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

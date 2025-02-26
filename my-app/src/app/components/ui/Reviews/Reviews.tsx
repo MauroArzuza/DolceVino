@@ -20,7 +20,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState<IReviews[]>([]);
 
   useEffect(() => {
-    fetch("./reviews.json")
+    fetch("/reviews.json")
       .then((response) => response.json())
       .then((data) => setReviews(data))
       .catch((error) => console.error("Error al cargar reseñas: " + error));
