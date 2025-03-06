@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Header } from "../../ui/Header/Header";
+import { Header } from "../components/ui/Header/Header";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -21,7 +21,7 @@ const wines = [
   { id: 3, name: "Vino Rosado", image: "/images/vino3.jpg", price: 145000 },
 ];
 
-export default function Products() {
+const Products = () => {
   const router = useRouter();
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -150,4 +150,6 @@ export default function Products() {
       </div>
     </>
   );
-}
+};
+
+export default Products;

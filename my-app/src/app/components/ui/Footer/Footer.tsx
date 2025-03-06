@@ -1,10 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { FC } from "react";
 
-const Footer = () => {
+interface IPropsFooter {
+  id?: string;
+}
+
+const Footer: FC<IPropsFooter> = ({ id }) => {
   return (
-    <footer className="flex items-center justify-center bg-footer text-white text-center gap-6 p-4">
+    <footer
+      className="flex items-center justify-center bg-footer text-white text-center gap-6 p-4"
+      id={id}
+    >
       {/* Horarios y Contacto */}
       <div className="text-xs flex flex-col gap-4">
         <div>

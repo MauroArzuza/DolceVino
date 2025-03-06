@@ -1,15 +1,11 @@
-import CreateProducts from "./components/screens/CreateProducts/CreateProducts";
-import EditProducts from "./components/screens/EditProducts/EditProducts";
-import HomeApp from "./components/screens/HomeApp/HomeApp";
-import Login from "./components/screens/Login/Login";
+// import HomeApp from "./HomeApp/HomeApp";
+import Login from "./Login/page";
 
 export default function Home() {
   return (
     <div>
-      <CreateProducts />
-      <EditProducts />
+      {/* <HomeApp /> */}
       <Login />
-      <HomeApp />
     </div>
   );
 }

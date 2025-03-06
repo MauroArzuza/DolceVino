@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Header } from "../../ui/Header/Header";
-import ProductSearch from "../../ui/ProductSearch/ProductSearch";
+import { Header } from "../components/ui/Header/Header";
+import ProductSearch from "../components/ui/ProductSearch/ProductSearch";
 import { useEffect, useState } from "react";
 
 interface categoria {
@@ -82,7 +82,9 @@ const ProductByCategory = () => {
         >
           <option value="">Categoria</option>
           {categoria.map((c) => (
-            <option value={c.id}>{c.name}</option>
+            <option key={c.id} value={c.id}>
+              {c.name}
+            </option>
           ))}
         </select>
 
@@ -94,7 +96,9 @@ const ProductByCategory = () => {
         >
           <option value="">Subcategoria</option>
           {subcategoria.map((sc) => (
-            <option value={sc.id}>{sc.name}</option>
+            <option key={sc.id} value={sc.id}>
+              {sc.name}
+            </option>
           ))}
         </select>
 
@@ -106,7 +110,9 @@ const ProductByCategory = () => {
         >
           <option value="">Marca</option>
           {marca?.map((m) => (
-            <option value={m.id}>{m.name}</option>
+            <option key={m.id} value={m.id}>
+              {m.name}
+            </option>
           ))}
         </select>
       </div>
