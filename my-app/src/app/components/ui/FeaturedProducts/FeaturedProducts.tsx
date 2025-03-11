@@ -1,11 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Navigation } from "swiper/modules";
+
+interface IPropsFeaturedProducts {
+  id: string;
+}
 
 interface Product {
   id: number;
@@ -19,7 +23,7 @@ interface Product {
   prominent: boolean;
 }
 
-const FeaturedProducts = () => {
+const FeaturedProducts: FC<IPropsFeaturedProducts> = ({ id }) => {
   const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -37,7 +41,7 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <div className="my-4">
+    <div className="my-4" id={id}>
       <h4 className="text-center font-bold text-lg">Productos destacados</h4>
       <Swiper
         modules={[Navigation]}

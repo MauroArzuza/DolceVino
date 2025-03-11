@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { FC } from "react";
 
-export default function CatalogBox() {
+interface IPropsCatalogBox {
+  id: string;
+}
+
+const CatalogBox: FC<IPropsCatalogBox> = ({ id }) => {
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] flex items-center justify-center text-white">
+    <div
+      className="relative w-full h-[400px] sm:h-[500px] flex items-center justify-center text-white"
+      id={id}
+    >
       <Image
         src="/FrenteDolceVino.png"
         alt="Fondo de tienda"
@@ -26,4 +34,6 @@ export default function CatalogBox() {
       </div>
     </div>
   );
-}
+};
+
+export default CatalogBox;
