@@ -53,20 +53,22 @@ const FeaturedProducts = () => {
         }}
         className="w-full max-w-[1100] mt-4"
       >
-        {featuredProducts.map((product) => (
-          <SwiperSlide key={product.id} className="max-w-[250]">
-            <Image
-              className="shadow-lg rounded mx-auto"
-              src={product.image}
-              height={200}
-              width={150}
-              alt={`Imagen de ${product.name}`}
-            />
-            <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
-              {product.name}
-            </p>
-          </SwiperSlide>
-        ))}
+        {featuredProducts
+          .slice(0, Math.floor(featuredProducts.length / 2))
+          .map((product) => (
+            <SwiperSlide key={product.id} className="max-w-[250]">
+              <Image
+                className="shadow-lg rounded mx-auto"
+                src={product.image}
+                height={200}
+                width={150}
+                alt={`Imagen de ${product.name}`}
+              />
+              <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
+                {product.name}
+              </p>
+            </SwiperSlide>
+          ))}
       </Swiper>
       <Swiper
         modules={[Navigation]}
@@ -81,20 +83,25 @@ const FeaturedProducts = () => {
         }}
         className="w-full max-w-[1100] mt-4"
       >
-        {featuredProducts.map((product) => (
-          <SwiperSlide key={product.id} className="max-w-[250px]">
-            <Image
-              className="shadow-lg rounded mx-auto"
-              src={product.image}
-              height={200}
-              width={150}
-              alt={`Imagen de ${product.name}`}
-            />
-            <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
-              {product.name}
-            </p>
-          </SwiperSlide>
-        ))}
+        {featuredProducts
+          .slice(
+            Math.floor(featuredProducts.length / 2),
+            featuredProducts.length
+          )
+          .map((product) => (
+            <SwiperSlide key={product.id} className="max-w-[250px]">
+              <Image
+                className="shadow-lg rounded mx-auto"
+                src={product.image}
+                height={200}
+                width={150}
+                alt={`Imagen de ${product.name}`}
+              />
+              <p className="text-center mt-2 max-w-[250px] overflow-hidden text-ellipsis whitespace-nowrap">
+                {product.name}
+              </p>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );
